@@ -1,0 +1,53 @@
+﻿@using InvoiceManagement.Core.Entities.Concretes
+@using InvoiceManagement.Core.Entities.Abstracts
+@{
+}
+
+<nav id="sidebarMenu" class="col-md-2 col-lg-2 d-md-block navbar-expand-sm text-black navbar-light bg-white border-bottom box-shadow mb-3 collapse">
+    <div class="position-sticky pt-3">
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" asp-controller="Home" asp-action="Index">
+                    Ana Sayfa
+                </a>
+            </li>
+            @if (Context.User.IsInRole(OperationClaims.Admin))
+            {
+                <li class="nav-item">
+                    <a class="nav-link" asp-controller="Apartment" asp-action="Index">
+                        Apartmanlar
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-controller="House" asp-action="Index">
+                        Daireler
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-controller="Resident" asp-action="Index">
+                        Kullanıcılar
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-controller="Invoice" asp-action="Index">
+                        Faturalar
+                    </a>
+                </li>
+                
+            }
+            @if (Context.User.IsInRole(OperationClaims.User))
+            {
+                <li class="nav-item">
+                    <a class="nav-link" asp-controller="UserPanel" asp-action="Invoices">
+                        Faturalar
+                    </a>
+                </li>
+            }
+            <li class="nav-item">
+                <a class="nav-link" asp-controller="Person" asp-action="Index">
+                    Profilim
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>

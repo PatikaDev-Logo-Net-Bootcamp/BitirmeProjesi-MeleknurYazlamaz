@@ -1,0 +1,84 @@
+﻿@model InvoiceManagement.Web.App.Models.House.CreateHouseViewModel
+@{
+    ViewData["Title"] = "House Page - Create";
+}
+
+<div class="container">
+    <h3>Daire Ekle</h3>
+    <form method="post" asp-action="Create">
+        <div class="mb-3">
+
+            <label class="form-label">Apartman</label>
+            <div class="input-group mb-3">
+                <select asp-for="ApartmentId" asp-items="@ViewData["Apartments"] as IEnumerable<SelectListItem>" class="form-control" aria-describedby="apartmentHelp">
+                    <option disabled selected></option>
+                </select>
+                <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#apartmentModal">+</a>
+            </div>
+            <div id="apartmentHelp" class="form-text">Apartman seçiniz.</div>
+
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Daire Tipi</label>
+            <div class="input-group mb-3">
+                <select asp-for="FlatTypeId" asp-items="@ViewData["FlatTypes"] as IEnumerable<SelectListItem>" class="form-control" aria-describedby="flatTypeHelp">
+                    <option disabled selected></option>
+                </select>
+                <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#flatTypeModal">+</a>
+
+            </div>
+            <div id="flatTypeHelp" class="form-text">Daire tipini seçiniz.</div>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Floor" class="form-label">Bulunduğu Kat</label>
+            <input asp-for="Floor" class="form-control" id="floorLocation" aria-describedby="floorLocationHelp">
+            <div id="floorLocationHelp" class="form-text">Bulunduğu katı giriniz.</div>
+        </div>
+        <div class="mb-3">
+            <label asp-for="DoorNumber" class="form-label">Daire Numarası</label>
+            <input asp-for="DoorNumber" class="form-control" id="doorNumber" aria-describedby="doorNumberHelp">
+            <div id="doorNumberHelp" class="form-text">Daire numarasını giriniz.</div>
+        </div>
+        
+        <input type="submit" value="Oluştur" class="btn btn-primary">
+    </form>
+
+    <!-- Apartment Modal -->
+    <div class="modal fade" id="apartmentModal" tabindex="-1" aria-labelledby="apartmentModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Kapat"></button>
+                </div>
+                <div class="modal-body">
+                    @{
+                        await Html.RenderPartialAsync("~/Views/Apartment/Create.cshtml");
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- FlatType Modal -->
+    <div class="modal fade" id="flatTypeModal" tabindex="-1" aria-labelledby="flatTypeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Kapat"></button>
+                </div>
+                <div class="modal-body">
+                    @{
+                        await Html.RenderPartialAsync("~/Views/FlatType/Create.cshtml");
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <div>
+        <a asp-action="Index">Listeye Geri Dön</a>
+    </div>
+
+
+</div>

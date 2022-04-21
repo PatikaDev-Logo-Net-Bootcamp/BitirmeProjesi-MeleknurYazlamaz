@@ -1,0 +1,22 @@
+﻿@model InvoiceManagement.Web.App.Models.InvoiceType.UpdateInvoiceTypeViewModel
+@{
+    ViewData["Title"] = "Invoice Type Page - Edit";
+}
+
+<div class="container p-3">
+
+    <h2>Fatura Tipi Bilgisi</h2>
+    <form method="post" asp-action="Edit">
+            <input asp-for="Id" hidden />
+        <div class="mb-3">
+            <label asp-for="Name" class="form-label">Fatura İsmi</label>
+            <input asp-for="Name" class="form-control" id="name" value=@Model.Name >
+        </div>
+        <input type="submit" value="Düzenle" class="btn btn-primary">
+    </form>
+    @*<div>
+        <a asp-action="Index">Listeye Geri Dön</a>
+    </div>*@
+
+
+</div>

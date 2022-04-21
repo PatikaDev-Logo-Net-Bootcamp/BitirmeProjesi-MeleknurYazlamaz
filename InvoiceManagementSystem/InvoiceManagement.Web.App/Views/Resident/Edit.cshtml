@@ -1,0 +1,40 @@
+﻿@model InvoiceManagement.Web.App.Models.Resident.UpdateResidentViewModel
+@{
+    ViewData["Title"] = "Resident Page - Edit";
+}
+
+<div class="container p-3">
+
+    <h2>Kullanıcı Bilgileri</h2>
+    <form method="post" asp-action="Edit">
+            <input asp-for="UserId" hidden />
+            <div class="mb-3">
+                <label asp-for="HouseId" class="form-label">Daire Bilgisi</label>
+                <div class="input-group mb-3">
+                    <select asp-for="HouseId" asp-items="@ViewData["Houses"] as IEnumerable<SelectListItem>" class="form-control" aria-describedby="houseHelp">
+                        <option disabled selected></option>
+                    </select>
+                </div>
+                <div id="houseHelp" class="form-text">Aradığınız Daire Bilgisi yok ise eklemek için <a asp-controller="House" asp-action="Create">tıklayınız..</a></div>
+            </div>
+            <div class="mb-3">
+                <label asp-for="CarPlate" class="form-label">Araç Plakası</label>
+                <input asp-for="CarPlate" type="text" class="form-control" id="carPlate" aria-describedby="carPlateHelp" value=@Model.CarPlate>
+            </div>
+            <div class="form-check">
+                <label class="form-check-label" for="isHirer">Kiracı mı?</label>
+                <input asp-for="IsHirer" class="form-check-input" id="isHirer" type="checkbox" value=@Model.IsHirer aria-describedby="isHirerHelp">
+            </div>
+            <div class="form-check">
+                 <label class="form-check-label" for="isOwner">Daire sahibi mi?</label>
+                 <input asp-for="IsOwner" class="form-check-input" id="isOwner" type="checkbox" value=@Model.IsOwner aria-describedby="isOwnerHelp">
+           </div>
+   
+        <input type="submit" value="Düzenle" class="btn btn-primary">
+    </form>
+    <div>
+        <a asp-action="Index">Listeye Geri Dön</a>
+    </div>
+
+
+</div>

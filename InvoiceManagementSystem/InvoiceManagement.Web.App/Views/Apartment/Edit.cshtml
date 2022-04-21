@@ -1,0 +1,24 @@
+﻿@using InvoiceManagement.Web.App.Models.Apartment
+
+@model UpdateApartmentViewModel
+@{
+    ViewData["Title"] = "Apartment Page - Edit";
+}
+
+<div class="container p-3">
+
+    <h2>Apartman Bilgileri</h2>
+    <form method="post" asp-action="Edit">
+            <input asp-for="Id" hidden />
+        <div class="mb-3">
+            <label asp-for="Name" class="form-label">Apartman İsmi</label>
+            <input asp-for="Name" class="form-control" id="name" value=@Model.Name >
+        </div>
+        <div class="mb-3">
+            <label asp-for="TotalFloors" class="form-label">Kat Sayısı</label>
+            <input asp-for="TotalFloors" class="form-control" id="totalFloors" value=@Model.TotalFloors>
+            
+        </div>
+        <input type="submit" value="Düzenle" class="btn btn-primary">
+    </form>
+</div>

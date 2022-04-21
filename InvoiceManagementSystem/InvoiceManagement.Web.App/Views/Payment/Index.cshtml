@@ -1,0 +1,48 @@
+﻿@model InvoiceManagement.Web.App.Models.Payment.CreatePayOrderViewModel
+@{
+    ViewData["Title"] = "Invoice Page - Create";
+}
+
+<div class="container">
+    <h3>Fatura Ödeme Ekranı</h3>
+    <form method="post" asp-action="PayOrder">
+        <input asp-for="InvoiceId" value=@Model.InvoiceId class="form-control" hidden readonly>
+        <div class="mb-3">
+            <label asp-for="Amount" class="form-label">Ödenecek Tutar</label>
+            <input asp-for="Amount" class="form-control" id="amount" value=@Model.Amount readonly>
+        </div>
+        <div class="mb-3">
+            <label asp-for="CardHolderName" class="form-label">Kart Sahibinin İsmi</label>
+            <input asp-for="CardHolderName" class="form-control" id="cardHolderName" aria-describedby="cardHolderNameHelp">
+            <div id="cardHolderNameHelp" class="form-text">Kart sahibinin ismini giriniz.</div>
+        </div>
+        <div class="mb-3">
+            <label asp-for="CardNumber" class="form-label">Kart Numarası</label>
+            <input asp-for="CardNumber" class="form-control" id="cardNumber" aria-describedby="cardNumberHelp">
+            <div id="cardNumberHelp" class="form-text">Kart numarası giriniz.</div>
+        </div>
+        <div class="row mb-3">
+            <div class="col w-25">
+                <label asp-for="ExpirationMouth" class="form-label">Geçerlilik Tarihi (Ay) </label>
+                <input asp-for="ExpirationMouth" class="form-control" id="expirationMouth" aria-describedby="expirationHelp">
+                <div id="expirationHelp" class="form-text"> Geçerlilik tarihini giriniz.</div>
+            </div>
+            <div class="col w-25">
+                <label asp-for="ExpirationYear" class="form-label">Geçerlilik Tarihi (Yıl)</label>
+                <input asp-for="ExpirationYear" class="form-control" id="expirationYear" aria-describedby="expirationHelp">
+            </div>
+            <div class="col w-25 ms-5">
+                <label asp-for="CVCCode" class="form-label">CVC</label>
+                <input asp-for="CVCCode" class="form-control" id="cvcCode" aria-describedby="cvcCodeHelp">
+                <div id="cvcCodeHelp" class="form-text">CVC kodunu giriniz.</div>
+            </div>
+        </div>
+
+        <input type="submit" value="Öde" class="btn btn-primary">
+    </form>
+    <div>
+        <a asp-action="Index" asp-controller="Invoice">Listeye Geri Dön</a>
+    </div>
+
+
+</div>

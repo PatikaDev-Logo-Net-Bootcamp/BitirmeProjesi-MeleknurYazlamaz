@@ -1,0 +1,24 @@
+﻿@using InvoiceManagement.Web.App.Models.FlatType
+
+@model UpdateFlatTypeViewModel
+@{
+    ViewData["Title"] = "FlatType Page - Edit";
+}
+
+<div class="container p-3">
+
+    <h2>Daire Tipi Bilgileri</h2>
+    <form method="post" asp-action="Edit">
+            <input asp-for="Id" hidden />
+        <div class="mb-3">
+            <label asp-for="RoomCount" class="form-label">Oda Sayısı</label>
+            <input asp-for="RoomCount" class="form-control" id="name" value=@Model.RoomCount >
+        </div>
+        <div class="mb-3">
+            <label asp-for="LivingRoomCount" class="form-label">Salon Sayısı</label>
+            <input asp-for="LivingRoomCount" class="form-control" id="totalFloors" value=@Model.LivingRoomCount>
+            
+        </div>
+        <input type="submit" value="Düzenle" class="btn btn-primary">
+    </form>
+</div>

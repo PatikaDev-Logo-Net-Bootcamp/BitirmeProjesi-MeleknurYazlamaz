@@ -1,0 +1,12 @@
+C:\Users\melek\source\repos\melekny\Invoice-Management-System\InvoiceManagementSystem\InvoiceManagement.Core\bin\Debug\net5.0\InvoiceManagement.Core.deps.json
+C:\Users\melek\source\repos\melekny\Invoice-Management-System\InvoiceManagementSystem\InvoiceManagement.Core\bin\Debug\net5.0\InvoiceManagement.Core.dll
+C:\Users\melek\source\repos\melekny\Invoice-Management-System\InvoiceManagementSystem\InvoiceManagement.Core\bin\Debug\net5.0\InvoiceManagement.Core.pdb
+C:\Users\melek\source\repos\melekny\Invoice-Management-System\InvoiceManagementSystem\InvoiceManagement.Core\obj\Debug\net5.0\InvoiceManagement.Core.csproj.AssemblyReference.cache
+C:\Users\melek\source\repos\melekny\Invoice-Management-System\InvoiceManagementSystem\InvoiceManagement.Core\obj\Debug\net5.0\InvoiceManagement.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\melek\source\repos\melekny\Invoice-Management-System\InvoiceManagementSystem\InvoiceManagement.Core\obj\Debug\net5.0\InvoiceManagement.Core.AssemblyInfoInputs.cache
+C:\Users\melek\source\repos\melekny\Invoice-Management-System\InvoiceManagementSystem\InvoiceManagement.Core\obj\Debug\net5.0\InvoiceManagement.Core.AssemblyInfo.cs
+C:\Users\melek\source\repos\melekny\Invoice-Management-System\InvoiceManagementSystem\InvoiceManagement.Core\obj\Debug\net5.0\InvoiceManagement.Core.csproj.CoreCompileInputs.cache
+C:\Users\melek\source\repos\melekny\Invoice-Management-System\InvoiceManagementSystem\InvoiceManagement.Core\obj\Debug\net5.0\InvoiceManagement.Core.dll
+C:\Users\melek\source\repos\melekny\Invoice-Management-System\InvoiceManagementSystem\InvoiceManagement.Core\obj\Debug\net5.0\refint\InvoiceManagement.Core.dll
+C:\Users\melek\source\repos\melekny\Invoice-Management-System\InvoiceManagementSystem\InvoiceManagement.Core\obj\Debug\net5.0\InvoiceManagement.Core.pdb
+C:\Users\melek\source\repos\melekny\Invoice-Management-System\InvoiceManagementSystem\InvoiceManagement.Core\obj\Debug\net5.0\ref\InvoiceManagement.Core.dll

@@ -1,0 +1,15 @@
+C:\Users\melek\source\repos\melekny\Invoice-Management-System\InvoiceManagementSystem\InvoiceManagement.Entities\bin\Debug\net5.0\InvoiceManagement.Entities.deps.json
+C:\Users\melek\source\repos\melekny\Invoice-Management-System\InvoiceManagementSystem\InvoiceManagement.Entities\bin\Debug\net5.0\InvoiceManagement.Entities.dll
+C:\Users\melek\source\repos\melekny\Invoice-Management-System\InvoiceManagementSystem\InvoiceManagement.Entities\bin\Debug\net5.0\InvoiceManagement.Entities.pdb
+C:\Users\melek\source\repos\melekny\Invoice-Management-System\InvoiceManagementSystem\InvoiceManagement.Entities\bin\Debug\net5.0\InvoiceManagement.Core.dll
+C:\Users\melek\source\repos\melekny\Invoice-Management-System\InvoiceManagementSystem\InvoiceManagement.Entities\bin\Debug\net5.0\InvoiceManagement.Core.pdb
+C:\Users\melek\source\repos\melekny\Invoice-Management-System\InvoiceManagementSystem\InvoiceManagement.Entities\obj\Debug\net5.0\InvoiceManagement.Entities.csproj.AssemblyReference.cache
+C:\Users\melek\source\repos\melekny\Invoice-Management-System\InvoiceManagementSystem\InvoiceManagement.Entities\obj\Debug\net5.0\InvoiceManagement.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\melek\source\repos\melekny\Invoice-Management-System\InvoiceManagementSystem\InvoiceManagement.Entities\obj\Debug\net5.0\InvoiceManagement.Entities.AssemblyInfoInputs.cache
+C:\Users\melek\source\repos\melekny\Invoice-Management-System\InvoiceManagementSystem\InvoiceManagement.Entities\obj\Debug\net5.0\InvoiceManagement.Entities.AssemblyInfo.cs
+C:\Users\melek\source\repos\melekny\Invoice-Management-System\InvoiceManagementSystem\InvoiceManagement.Entities\obj\Debug\net5.0\InvoiceManagement.Entities.csproj.CoreCompileInputs.cache
+C:\Users\melek\source\repos\melekny\Invoice-Management-System\InvoiceManagementSystem\InvoiceManagement.Entities\obj\Debug\net5.0\InvoiceManagement.Entities.csproj.CopyComplete
+C:\Users\melek\source\repos\melekny\Invoice-Management-System\InvoiceManagementSystem\InvoiceManagement.Entities\obj\Debug\net5.0\InvoiceManagement.Entities.dll
+C:\Users\melek\source\repos\melekny\Invoice-Management-System\InvoiceManagementSystem\InvoiceManagement.Entities\obj\Debug\net5.0\refint\InvoiceManagement.Entities.dll
+C:\Users\melek\source\repos\melekny\Invoice-Management-System\InvoiceManagementSystem\InvoiceManagement.Entities\obj\Debug\net5.0\InvoiceManagement.Entities.pdb
+C:\Users\melek\source\repos\melekny\Invoice-Management-System\InvoiceManagementSystem\InvoiceManagement.Entities\obj\Debug\net5.0\ref\InvoiceManagement.Entities.dll

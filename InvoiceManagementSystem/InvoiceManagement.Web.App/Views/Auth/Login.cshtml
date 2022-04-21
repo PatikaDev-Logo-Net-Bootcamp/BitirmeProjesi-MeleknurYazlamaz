@@ -1,0 +1,26 @@
+﻿@model InvoiceManagement.Web.App.Models.Auth.LoginViewModel
+
+@{
+    ViewData["Title"] = "Login Page";
+}
+
+<div class="login-form-body">
+    <div class="form-signin">
+        <form method="post" asp-action="Login">
+            <h1 class="h3 mb-3 fw-normal text-center">Giriş Yapınız</h1>
+            <div class="form-floating">
+                <input asp-for="Email" type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput">Email</label>
+            </div>
+            <div class="form-floating">
+                <input asp-for="Password" type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                <label for="floatingPassword">Şifre</label>
+            </div>
+     
+            <input type="submit" value="Giriş Yap" class="btn btn-lg btn-primary">
+        </form>
+        <div>
+            <p><a asp-action="Register">Kaydol</a></p>
+        </div>
+    </div>
+</div>

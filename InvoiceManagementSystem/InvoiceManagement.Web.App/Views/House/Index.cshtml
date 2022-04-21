@@ -1,0 +1,63 @@
+﻿@model IEnumerable<InvoiceManagement.Web.App.Models.House.GetHousesDetailViewModel>
+@{
+    ViewData["Title"] = "House Page";
+}
+
+<div class="container p-3">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h2 class="text-primary">Daire Listesi</h2>
+        </div>
+        <div class="col-6 text-right">
+            <a asp-controller="House" asp-action="Create" class="btn btn-primary">
+                <i class="fas fa-plus"></i> &nbsp; Yeni Oluştur
+            </a>
+        </div>
+    </div>
+
+    <br /><br />
+
+    @if (Model.Any())
+    {
+
+        <table class="table table-bordered table-striped" style="width:100%">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Apartman İsmi</th>
+                <th scope="col">Bulunduğu Kat</th>
+                <th scope="col">Daire Numarası</th>
+                <th scope="col">Daire Tipi</th>
+                <th scope="col"></th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <th scope="row">@item.Id</th>
+                    <td width="25%">@item.ApartmentName</td>
+                    <td width="20%">@item.Floor</td>
+                    <td width="20%">@item.DoorNumber</td>
+                    <td width="15%">@item.FlatType</td>
+                    <td class="text-center">
+                        <a asp-controller="House" asp-action="Delete" asp-route-Id=@item.Id class="btn btn-danger">
+                            Sil
+                        </a>
+                        <a asp-controller="House" asp-action="Edit" asp-route-Id=@item.Id class="btn btn-primary">
+                            Düzenle
+                        </a>
+                    </td>
+                </tr>
+
+            }
+
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <h5 class="text-center">Gösterilecek veri bulunamadı.</h5>
+    }
+
+</div>

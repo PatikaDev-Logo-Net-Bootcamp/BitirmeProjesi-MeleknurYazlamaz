@@ -1,0 +1,23 @@
+﻿@using InvoiceManagement.Web.App.Models.FlatType
+
+@model CreateFlatTypeViewModel
+@{
+    ViewData["Title"] = "Flat Type Page - Create";
+}
+
+<div class="container">
+    <h3>Daire Tipi Ekle</h3>
+    <form method="post" asp-action="Create" asp-controller="FlatType">
+        <div class="mb-3">
+            <label asp-for="RoomCount" class="form-label">Oda Sayısı</label>
+            <input asp-for="RoomCount" class="form-control" id="roomCount" aria-describedby="roomCountHelp">
+            <div id="roomCountHelp" class="form-text">Oda sayısını giriniz.</div>
+        </div>
+        <div class="mb-3">
+            <label asp-for="LivingRoomCount" class="form-label">Salon Sayısı</label>
+            <input asp-for="LivingRoomCount" class="form-control" id="livingRoomCount" aria-describedby="livingRoomCountHelp">
+            <div id="livingRoomCountHelp" class="form-text">Salon sayısını giriniz.</div>
+        </div>
+        <input type="submit" value="Oluştur" class="btn btn-primary">
+    </form>
+</div>

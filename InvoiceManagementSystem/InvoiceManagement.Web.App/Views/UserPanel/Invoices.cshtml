@@ -1,0 +1,61 @@
+﻿
+@model IEnumerable< InvoiceManagement.Web.App.Models.UserPanel.GetUserInvoicesViewModel>
+@{
+    ViewData["Title"] = "Fatura Sayfası";
+}
+
+<div class="container p-3">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h2 class="text-primary">Fatura Listesi</h2>
+        </div>
+    </div>
+
+    <br /><br />
+
+    @if (Model.Any())
+    {
+
+        <table class="table table-bordered table-striped" style="width:100%">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Daire Bilgisi</th>
+                <th scope="col">Fatura Tipi</th>
+                <th scope="col">Ödenecek Tutar</th>
+                <th scope="col">Son Ödeme Tarihi</th>
+                <th scope="col">Fatura Durumu</th>
+                <th scope="col"></th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (var item in Model)
+            {
+                if (item.Status == true)
+                {
+                    <tr>
+                    <th scope="row">@item.Id</th>
+                    <td width="20%">@item.House</td>
+                    <td width="10%">@item.InvoiceType</td>
+                    <td width="10%">@item.Amount</td>
+                    <td width="10%">@item.InvoiceDate</td>
+                    <td width="10%">@item.Status</td>
+                    <td class="text-center">
+                        <a asp-controller="Invoice" asp-action="Pay" asp-route-Id=@item.Id class="btn btn-primary">
+                            Öde
+                        </a>
+                    </td>
+                </tr>
+                }
+
+            }
+
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <h5 class="text-center">Gösterilecek veri bulunamadı.</h5>
+    }
+
+</div>

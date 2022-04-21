@@ -1,0 +1,62 @@
+﻿@using InvoiceManagement.Web.App.Models.Apartment
+
+@model IEnumerable<GetApartmentsViewModel>
+
+@{
+    ViewData["Title"] = "Apartment Page";
+}
+
+<div class="container p-3">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h2 class="text-primary">Apartman Listesi</h2>
+        </div>
+        <div class="col-6 text-right">
+            <a asp-controller="Apartment" asp-action="Create" class="btn btn-primary">
+                <i class="fas fa-plus"></i> &nbsp; Yeni Oluştur
+            </a>
+        </div>
+    </div>
+
+    <br /><br />
+
+    @if (Model.Any())
+    {
+
+        <table class="table table-bordered table-striped" style="width:100%">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Apartman İsmi</th>
+                    <th scope="col">Kat Sayısı</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <th scope="row">@item.Id</th>
+                        <td width="50%">@item.Name</td>
+                        <td width="25%">@item.TotalFloors</td>
+                        <td class="text-center">
+                            <a asp-controller="Apartment" asp-action="Delete" asp-route-Id=@item.Id class="btn btn-danger">
+                                Sil
+                            </a>
+                            <a asp-controller="Apartment" asp-action="Edit" asp-route-Id=@item.Id class="btn btn-primary">
+                                Düzenle
+                            </a>
+                        </td>
+                    </tr>
+
+                }
+
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <h5 class="text-center">Gösterilecek veri bulunamadı.</h5>
+    }
+
+</div>

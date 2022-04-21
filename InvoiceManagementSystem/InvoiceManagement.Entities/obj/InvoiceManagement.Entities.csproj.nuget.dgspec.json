@@ -1,0 +1,146 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\melek\\source\\repos\\melekny\\Invoice-Management-System\\InvoiceManagementSystem\\InvoiceManagement.Entities\\InvoiceManagement.Entities.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\melek\\source\\repos\\melekny\\Invoice-Management-System\\InvoiceManagementSystem\\InvoiceManagement.Core\\InvoiceManagement.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\melek\\source\\repos\\melekny\\Invoice-Management-System\\InvoiceManagementSystem\\InvoiceManagement.Core\\InvoiceManagement.Core.csproj",
+        "projectName": "InvoiceManagement.Core",
+        "projectPath": "C:\\Users\\melek\\source\\repos\\melekny\\Invoice-Management-System\\InvoiceManagementSystem\\InvoiceManagement.Core\\InvoiceManagement.Core.csproj",
+        "packagesPath": "C:\\Users\\melek\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\melek\\source\\repos\\melekny\\Invoice-Management-System\\InvoiceManagementSystem\\InvoiceManagement.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\melek\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[10.1.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.1.1, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[5.0.12, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.12, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[11.0.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\melek\\source\\repos\\melekny\\Invoice-Management-System\\InvoiceManagementSystem\\InvoiceManagement.Entities\\InvoiceManagement.Entities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\melek\\source\\repos\\melekny\\Invoice-Management-System\\InvoiceManagementSystem\\InvoiceManagement.Entities\\InvoiceManagement.Entities.csproj",
+        "projectName": "InvoiceManagement.Entities",
+        "projectPath": "C:\\Users\\melek\\source\\repos\\melekny\\Invoice-Management-System\\InvoiceManagementSystem\\InvoiceManagement.Entities\\InvoiceManagement.Entities.csproj",
+        "packagesPath": "C:\\Users\\melek\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\melek\\source\\repos\\melekny\\Invoice-Management-System\\InvoiceManagementSystem\\InvoiceManagement.Entities\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\melek\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\melek\\source\\repos\\melekny\\Invoice-Management-System\\InvoiceManagementSystem\\InvoiceManagement.Core\\InvoiceManagement.Core.csproj": {
+                "projectPath": "C:\\Users\\melek\\source\\repos\\melekny\\Invoice-Management-System\\InvoiceManagementSystem\\InvoiceManagement.Core\\InvoiceManagement.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

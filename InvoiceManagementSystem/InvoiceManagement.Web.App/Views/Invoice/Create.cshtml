@@ -1,0 +1,63 @@
+﻿@model InvoiceManagement.Web.App.Models.Invoice.CreateInvoiceViewModel
+@{
+    ViewData["Title"] = "Invoice Page - Create";
+}
+
+<div class="container">
+    <h3>Fatura Ekle</h3>
+    <form method="post" asp-action="Create">
+        <div class="mb-3">
+            <label asp-for="HouseId" class="form-label">Daire Bilgisi</label>
+            <div class="input-group mb-3">
+                <select asp-for="HouseId" asp-items="@ViewData["Houses"] as IEnumerable<SelectListItem>" class="form-control" aria-describedby="houseHelp">
+                    <option disabled selected></option>
+                </select>
+            </div>
+            <div id="houseHelp" class="form-text"> Aradığınız Daire Bilgisi yok ise eklemek için <a asp-controller="House" asp-action="Create">tıklayınız.</a></div>
+        </div>
+        <div class="mb-3">
+            <label asp-for="InvoiceTypeId" class="form-label">Fatura Tipi</label>
+            <div class="input-group mb-3">
+                <select asp-for="InvoiceTypeId" asp-items="@ViewData["InvoiceTypes"] as IEnumerable<SelectListItem>" class="form-control" aria-describedby="invoiceTypeHelp">
+                    <option disabled selected></option>
+                </select>
+                <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#invoiceTypeModal">+</a>
+            </div>
+            <div id="invoiceTypeHelp" class="form-text">Fatura tipini(Aidat/Su/Elektrik/Doğalgaz) giriniz.</div>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Amount" class="form-label">Ödenecek Tutar</label>
+            <input asp-for="Amount" class="form-control" id="amount" aria-describedby="amountrHelp">
+            <div id="amountrHelp" class="form-text">Tutarı giriniz.</div>
+        </div>
+        <div class="mb-3">
+            <label asp-for="InvoiceDate" class="form-label">Son Ödeme Tarihi</label>
+            <input asp-for="InvoiceDate" class="form-control" id="invoiceDate" aria-describedby="invoiceDateHelp">
+            <div id="invoiceDateHelp" class="form-text">Faturanın son ödeme tarihi giriniz.</div>
+        </div>
+        <input type="submit" value="Create" class="btn btn-primary">
+    </form>
+    
+    <!-- InvoiceType Modal -->
+    <div class="modal fade" id="invoiceTypeModal" tabindex="-1" aria-labelledby="invoiceTypeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Kapat"></button>
+                </div>
+                <div class="modal-body">
+                    @{
+                        await Html.RenderPartialAsync("~/Views/InvoiceType/Create.cshtml");
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <div>
+        <a asp-action="Index">Listeye Geri Dön</a>
+    </div>
+
+
+</div>

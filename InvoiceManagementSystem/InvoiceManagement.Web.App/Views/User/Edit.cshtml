@@ -1,0 +1,34 @@
+﻿@model InvoiceManagement.Web.App.Models.User.UpdateUserViewModel
+@{
+}
+
+<div class="container">
+    <h3>Kullanıcı Bilgileri</h3>
+    <form method="post" asp-action="Edit" asp-controller="User">
+        <input asp-for="Id" hidden />
+        <div class="mb-3">
+            <label asp-for="FullName" class="form-label">İsim</label>
+            <input asp-for="FullName" class="form-control" id="fullName">
+            
+        </div>
+        <div class="mb-3">
+            <label asp-for="Email" class="form-label">E-mail Adresi</label>
+            <input asp-for="Email" class="form-control" id="email">
+            
+        </div>
+        <div class="mb-3">
+            <label asp-for="CitizenId" class="form-label">TC Kimlik Numarası</label>
+            <input asp-for="CitizenId" class="form-control" id="citizenId" >
+           
+        </div>
+        <div class="mb-3">
+            <label asp-for="PhoneNumber" class="form-label">Telefon Numarası</label>
+            <input asp-for="PhoneNumber" class="form-control" id="mobileNumber">
+            
+        </div>
+        <input type="submit" value="Düzenle" class="btn btn-primary">
+    </form>
+    <div>
+        <a asp-action="Index">Listeye Geri Dön</a>
+    </div>
+</div>

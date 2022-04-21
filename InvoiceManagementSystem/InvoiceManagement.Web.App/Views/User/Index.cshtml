@@ -1,0 +1,55 @@
+﻿@model InvoiceManagement.Web.App.Models.User.GetUserViewModel
+@{
+}
+div class="container">
+    <div class="row">
+        <h1 class="display-5">Hoş geldiniz :) : <strong> @Model.FullName</strong></h1>
+        <div class="col-md-2">
+            <div class="row">
+                <h5>Id : </h5>
+                <span class="border-bottom"></span>
+            </div>
+            <div class="row">
+                <h5>E-mail Adresi : </h5>
+                <span class="border-bottom"></span>
+            </div>
+            <div class="row">
+                <h5>Telefon Numarası</ : </h5>
+                <span class="border-bottom"></span>
+            </div>
+            <div class="row">
+                <h5>TC Kimlik Numarası : </h5>
+                <span class="border-bottom"></span>
+            </div>
+            <div class="row">
+                <h5>Kullancı Durumu : </h5>
+                <span class="border-bottom"></span>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="row">
+                <h5 class="text-muted">@Model.Id</h5>
+                <span class="border-bottom"></span>
+            </div>
+            <div class="row">
+                <h5 class="text-muted">@Model.Email</h5>
+                <span class="border-bottom"></span>
+            </div>
+            <div class="row">
+                <h5 class="text-muted">@Model.PhoneNumber</h5>
+                <span class="border-bottom"></span>
+            </div>
+            <div class="row">
+                <h5 class="text-muted">@Model.CitizenId</h5>
+                <span class="border-bottom"></span>
+            </div>
+            <div class="row">
+                <h5 class="text-muted">@Model.IsActive</h5>
+                <span class="border-bottom"></span>
+            </div>
+        </div>
+    </div>
+    <div class="position-relative">
+        <a class="btn btn-warning position-absolute top-0 end-0" asp-controller="Person" asp-action="Edit" asp-route-Id=@Model.Id>Düzenle</a>
+    </div>
+</div>

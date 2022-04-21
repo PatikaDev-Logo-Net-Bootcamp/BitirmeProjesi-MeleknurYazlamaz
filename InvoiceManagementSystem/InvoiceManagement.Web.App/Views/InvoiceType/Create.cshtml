@@ -1,0 +1,22 @@
+﻿@model InvoiceManagement.Web.App.Models.InvoiceType.CreateInvoiceTypeViewModel
+@{
+    ViewData["Title"] = "Invoice Type Page - Create";
+}
+
+<div class="container">
+    <h3>Fatura Tipi Ekle</h3>
+    <form method="post" asp-action="Create" asp-controller="InvoiceType">
+        <div class="mb-3">
+            <label asp-for="Name" class="form-label">Fatura İsmi</label>
+            <input asp-for="Name" class="form-control" id="name" aria-describedby="nameHelp">
+            <div id="nameHelp" class="form-text">Fatura ismini giriniz.</div>
+        </div>
+        <input type="submit" value="Create" class="btn btn-primary">
+    </form>
+    @*<div>
+        <a asp-action="Index">Listeye Geri Dön</a>
+    </div>*@
+
+
+</div>
+

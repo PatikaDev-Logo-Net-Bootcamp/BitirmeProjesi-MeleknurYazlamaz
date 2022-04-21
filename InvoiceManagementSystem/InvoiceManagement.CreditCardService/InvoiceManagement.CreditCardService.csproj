@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <StartupObject>InvoiceManagement.CreditCardService.Program</StartupObject>
+    <AssemblyName>InvoiceManagement.CreditCardService</AssemblyName>
+    <RootNamespace>InvoiceManagement.CreditCardService</RootNamespace>
+    <BaseIntermediateOutputPath>C:\Users\melek\source\repos\melekny\Invoice-Management-System\InvoiceManagementSystem\InvoiceManagement.CreditCardService\obj\</BaseIntermediateOutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="11.0.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+    <PackageReference Include="MongoDB.Driver" Version="2.14.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,98 @@
+﻿@using InvoiceManagement.Core.Entities.Abstracts
+@using Microsoft.AspNetCore.Http
+@using InvoiceManagement.Core.Entities.Concretes
+@using System.Security.Claims
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Invoice Management System </title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Fatura Yönetim Sistemi</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1"></ul>
+                    <div class="text-end">
+
+                        @{
+                            if (Context.Session.GetString("Token") == null)
+                            {
+                                //<a class="btn text-dark" asp-area="" asp-controller="Auth" asp-action="Login">Login</a>
+                                //<a class="btn btn-primary text-white " asp-area="" asp-controller="Auth" asp-action="Register">Register</a>
+                                <a class="btn btn-primary text-white " asp-area="" asp-controller="Auth" asp-action="Login">Giriş</a>
+                            }
+                            else
+                            {
+                                <a class="text-black" asp-controller="Person" asp-action="Index">@Context.User.Claims.FirstOrDefault(x=>x.Type==ClaimTypes.Name)?.Value</a>
+                                <a class="btn btn-primary text-white " asp-area="" asp-controller="Auth" asp-action="LogOut">Çıkış</a>
+                            }
+                        }
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+
+
+        @{
+            if (Context.User.IsInRole(OperationClaims.Admin) || Context.User.IsInRole(OperationClaims.User))
+            {
+
+                <div class="row">
+                    @{
+                        await Html.RenderPartialAsync("_MenuBar");
+                    }
+                    <main class="col-md-10 ms-sm-auto col-lg-10 px-md-4">
+                        @if (TempData["alertType"] != null)
+                        {
+                            <div id="liveAlertPlaceholder">
+                                <div class="alert alert-@TempData["alertType"] alert-dismissible" role="alert">
+                                    <strong>@TempData["alertType"].ToString()?.ToUpper() !!</strong> @TempData["alertMessage"]
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                </div>
+                            </div>
+                        }
+                        @RenderBody()
+
+                    </main>
+                </div>
+            }
+            else
+            {
+                <main role="main" class="pb-3">
+
+                    @RenderBody()
+                </main>
+            }
+
+        }
+
+
+        @*<main role="main" class="pb-3">
+
+
+            </main>*@
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; @DateTime.Now.Year - Invoice Management System - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

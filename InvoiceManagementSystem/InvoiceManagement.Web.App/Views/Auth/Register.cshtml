@@ -1,0 +1,27 @@
+﻿@model InvoiceManagement.Web.App.Models.Auth.RegisterViewModel
+
+@{
+    ViewData["Title"] = "Register Page";
+}
+
+<div class="container">
+    <h3>Kullanıcı Kayıt Formu</h3>
+    <form method="post" asp-action="Register" asp-controller="Auth">
+        <div class="mb-3">
+            <label asp-for="FullName" class="form-label">Adınız</label>
+            <input asp-for="FullName" type="text" class="form-control" id="fullName" aria-describedby="fullNameHelp">
+            <div id="fullNameHelp" class="form-text">Adınızı giriniz.</div>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Email" class="form-label">E-mail</label>
+            <input asp-for="Email" type="email" class="form-control" id="email" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">E-mail adresinizi giriniz.</div>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Password" class="form-label">Şifre</label>
+            <input asp-for="Password" class="form-control" id="password" type="password" aria-describedby="passwordHelp">
+            <div id="passwordHelp" class="form-text">Şifreyi giriniz.</div>
+        </div>
+        <input type="submit" value="Kaydol" class="btn btn-primary">
+    </form>
+</div>

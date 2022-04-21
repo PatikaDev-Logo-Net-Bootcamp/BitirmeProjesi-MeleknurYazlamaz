@@ -1,0 +1,26 @@
+﻿@using InvoiceManagement.Web.App.Models.Apartment
+
+@model CreateApartmentViewModel
+@{
+    ViewData["Title"] = "Apartment Page - Create";
+}
+
+<div class="container">
+    <h3>Apartman Ekle</h3>
+    <form method="post" asp-action="Create" asp-controller="Apartment">
+        <div class="mb-3">
+            <label asp-for="Name" class="form-label">Apartman İsmi</label>
+            <input asp-for="Name" class="form-control" id="name" aria-describedby="apartmentNameHelp">
+            <div id="apartmentNameHelp" class="form-text">Apartman ismini giriniz.</div>
+        </div>
+        <div class="mb-3">
+            <label asp-for="TotalFloors" class="form-label">Kat Sayısı</label>
+            <input asp-for="TotalFloors" class="form-control" id="totalFloors" aria-describedby="apartmentTotalFloorsHelp">
+            <div id="apartmentTotalFloorsHelp" class="form-text">Apartmanın toplam kat sayısını giriniz.</div>
+        </div>
+        <input type="submit" value="Oluştur" class="btn btn-primary">
+    </form>
+    @*<div>
+        <a asp-action="Index">Listeye Geri Dön</a>
+    </div>*@
+</div>
